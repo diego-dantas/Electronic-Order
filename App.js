@@ -18,10 +18,10 @@ export default class App extends Component {
         }}
       >
       
-       <Router>
-          <Scene key='login'              component={LoginScreen} initil/>
-          <Scene key='tableHallScreen'    component={TableHallScreen}/>
-          <Scene key='tableDetailsScreen' component={TableDetailsScreen}/>
+       <Router sceneStyle={{paddingTop: 60}}>
+          <Scene key='login'              component={LoginScreen}/>
+          <Scene key='tableHallScreen'    component={TableHallScreen} title='São de Mesas'/>
+          <Scene key='tableDetailsScreen' component={TableDetailsScreen} initil/>
        </Router>
       </View>
     );

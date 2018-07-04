@@ -16,12 +16,12 @@ export default class Table extends Component {
         return(
             <View>
                 <TouchableOpacity
-                    onPress={() => {Actions.tableDetailsScreen();}}
-                    style={{marginBottom: 20, backgroundColor: this.state.color, width: 150, height: 150}}
+                    onPress={() => {Actions.tableDetailsScreen({mesa: this.state.mesa});}}
+                    style={{marginBottom: 20, backgroundColor: this.state.color, width: 125, height: 125}}
                     //onPress={() => alert('to aqui')}
                  >
                     <Text
-                        style={{color: '#fff', alignSelf: 'center', fontSize: 35, paddingVertical: 50}}
+                        style={{color: '#fff', alignSelf: 'center', fontSize: 25, paddingVertical: 50}}
                     > 
                        { this.state.mesa } 
                     </Text>

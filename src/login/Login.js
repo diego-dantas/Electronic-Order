@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {
-  Text,
   View,
   TextInput, TouchableOpacity
 } from 'react-native';
+import { Container, Button, Text,  Icon, Item, Input} from 'native-base';
+
+
 
 import { Actions } from 'react-native-router-flux';
 
@@ -12,42 +14,39 @@ export default class Login extends Component {
         super(props);
     }
 
-  login = () => {
-    alert('to aqui 2');
-  }
   render() {
     return (
-      <View
+      <Container
         style={{
           flex: 1,
-          justifyContent: 'center'
+          justifyContent: 'center',
         }}
       >
-        <Text
+         <Text
           style={{textAlign: 'center'}}
         >
           Login
         </Text>
-        <TextInput
-          placeholder='Usuário'
-          style={{marginHorizontal: 20, marginVertical: 10}}
-        />
-        <TextInput
-          placeholder='Senha'
-          secureTextEntry={true}
-          style={{marginHorizontal: 20, marginVertical: 10}}
-        />
-        <TouchableOpacity
-           onPress={() => {Actions.tableHallScreen();}}
-          
-            style={{marginHorizontal: 20, backgroundColor: 'blue', padding: 10}}
+        <View  style={{marginHorizontal: 30}}>
+          <Item>
+            <Icon active type="FontAwesome" name='user' />
+            <Input placeholder='Usuario'/>
+          </Item>
+          <Item>
+            <Icon active type="FontAwesome" name='key' />
+            <Input placeholder='Senha'/>
+          </Item>
+        </View>
+        <Button 
+          block rounded
+          style={{margin: 20, padding: 10}}
+          onPress={() => {Actions.tableHallScreen();}}
         >
-          <Text
-            style={{color: '#fff', alignSelf: 'center', fontSize: 20}}
-          > Entrar </Text>
-        </TouchableOpacity>
+          <Text>Login</Text>
+          <Icon type="FontAwesome" name="sign-in" />
+        </Button>
         
-      </View>
+      </Container>
     );
   }
 }

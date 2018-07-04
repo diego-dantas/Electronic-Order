@@ -34,6 +34,8 @@ export default class TableHall extends Component {
                     <Table mesa='Mesa 8' color='green'/>
                     <Table mesa='Mesa 9' color='green'/>
                     <Table mesa='Mesa 10' color='green' />
+                    <Table mesa='Mesa 11' color='green' />
+                    <Table mesa='Mesa 12' color='red' />
                     
                 </View>
             </ScrollView>
